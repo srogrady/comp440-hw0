@@ -12,11 +12,17 @@ from load_data import load_all
 
 
 def top5_my_definition(ratings, ratings_df, movies, movies_df):
-    print("== My definition ==")
+    print("== Niche ==")
 
+    movies_ratings = ratings_df.merge(movies_df, on="movie_id")
+
+    movie_counts = movies_ratings.groupby("title").size()
+
+    niche_movies = movie_counts[movie_counts == 1].head(5)
+
+    print(niche_movies)
 
 def human_part3(ratings, ratings_df, movies, movies_df):
-    print("part 3 unimplemented")  # delete this line when you start
     top5_my_definition(ratings, ratings_df, movies, movies_df)
 
 

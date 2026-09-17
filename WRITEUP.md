@@ -11,58 +11,114 @@ Code: `human_part1.py`. One or two sentences per answer, with the numbers.
 
 **(a) How many ratings, users, and movies are there, and how are ratings distributed across 1–5 stars?**
 
-XXXX
+There are 100000 ratings, 943 users, 1682 movies, and the ratings are distributed across the 1-5 stars as follows:
+1     6110
+2    11370
+3    27145
+4    34174
+5    21201
 
 **(b) What is the median number of ratings per user, and how many users have 100 or more ratings?**
 
-XXXX
+The median number of ratings per user is 65.0 and
+364 users have 100 or more ratings.
 
 **(c) Which 10 movies have the most ratings?**
 
-XXXX
+These 10 movies have the most ratings : title
+Star Wars (1977)                 583
+Contact (1997)                   509
+Fargo (1996)                     508
+Return of the Jedi (1983)        507
+Liar Liar (1997)                 485
+English Patient, The (1996)      481
+Scream (1996)                    478
+Toy Story (1995)                 452
+Air Force One (1997)             431
+Independence Day (ID4) (1996)    429
 
 **(d) Among movies with at least 20 ratings, which 10 have the highest mean rating?**
 
-XXXX
+This first list is the movies with the highest mean ratings 
+title
+Close Shave, A (1995)                                     4.491071
+Schindler's List (1993)                                   4.466443
+Wrong Trousers, The (1993)                                4.466102
+Casablanca (1942)                                         4.456790
+Wallace & Gromit: The Best of Aardman Animation (1996)    4.447761
+Shawshank Redemption, The (1994)                          4.445230
+Rear Window (1954)                                        4.387560
+Usual Suspects, The (1995)                                4.385768
+Star Wars (1977)                                          4.358491
+12 Angry Men (1957)                                       4.344000
+
+This list shows those movies with the rating counts
+Name: rating, dtype: float64
+title
+Close Shave, A (1995)                                     112
+Schindler's List (1993)                                   298
+Wrong Trousers, The (1993)                                118
+Casablanca (1942)                                         243
+Wallace & Gromit: The Best of Aardman Animation (1996)     67
+Shawshank Redemption, The (1994)                          283
+Rear Window (1954)                                        209
+Usual Suspects, The (1995)                                267
+Star Wars (1977)                                          583
+12 Angry Men (1957)                                       125
 
 **Anything you got stuck on (what you tried, where it broke), or "none":**
 
-XXXX
+Took me quite a while to refresh on python and figure out what I needed, but got past it all with lots of trial and error. 
 
 ## Part 2. The best movie
 
 Code: `human_part2.py`.
 
-**My rule:** XXXX
+**My rule:** The best movie will have the highest mean star rating, out of the movies with at least 40 ratings. 
 
-**One rule I considered and rejected, and why:** XXXX
+**One rule I considered and rejected, and why:** I rejected just plain highest mean star rating because one person could've rated an unpopular movie a 5 stars because they loved it and that wouldn't be fair. 
 
-**Top 10 under my rule:**
-
-XXXX
+**Top 10 under my rule:** 
+Here's the list with their ratings
+title
+Close Shave, A (1995)                                     4.491071
+Schindler's List (1993)                                   4.466443
+Wrong Trousers, The (1993)                                4.466102
+Casablanca (1942)                                         4.456790
+Wallace & Gromit: The Best of Aardman Animation (1996)    4.447761
+Shawshank Redemption, The (1994)                          4.445230
+Rear Window (1954)                                        4.387560
+Usual Suspects, The (1995)                                4.385768
+Star Wars (1977)                                          4.358491
+12 Angry Men (1957)                                       4.344000
 
 **Why my rule, in at most 150 words. Name one thing it gains and one thing it loses:**
 
-XXXX
+It gains credibility because 40 ratings is a pretty large number of ratings (assuming that's 40 different people) so, it must be a pretty credible average. It could definitely be thrown off by outliers though. 
 
 ## Part 3. The most ___ movie
 
 Code: `human_part3.py`.
 
-**My adjective:** XXXX
+**My adjective:** Niche
 
-**My definition** (one sentence, precise enough that a classmate could code it)**:** XXXX
+**My definition** (one sentence, precise enough that a classmate could code it)**:** Has only 1 rating, meaning very few viewers have watched it or thought very much about it. 
 
-**One definition I considered and rejected, and why:** XXXX
+**One definition I considered and rejected, and why:** saying only a couple ratings because I realized I needed to be specific
 
 **Top 5 under my definition:**
 
-XXXX
+title
+Aiqing wansui (1994)           1
+All Things Fair (1996)         1
+Angel on My Shoulder (1946)    1
+Angela (1995)                  1
+August (1996)                  1
 
-**What your definition captures, what it misses, and where "___-ness" lives in this data — the
+**What your definition captures, what it misses, and where "niche-ness" lives in this data — the
 genre labels, what the crowd did, or the words in the titles. At most 150 words:**
 
-XXXX
+My definition captures the overlooked/unknown movies, the sort of outliers of this dataset, making these movies niche. They live in the movies with only 1 rating. It misses the odd movies with more than 1 rating but very few ratings still. 
 
 ## Part 4. Claude's answers
 
