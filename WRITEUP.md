@@ -127,60 +127,73 @@ or your answers.
 
 **Did its numbers for Part 1 match yours? If not, which, and what did you find?**
 
-XXXX
+Match there were a few visual improvements and specifics (like percent of the data) that were included in addition. 
 
 ## Part 5. Comparing the best movie
 
 **Claude's rule:**
 
-XXXX
+To find a "best" movie that isn't an artifact of a small sample, use a Bayesian
+("IMDB-style") weighted rating that shrinks each movie's mean toward the overall
+mean, by an amount that shrinks as the movie collects more ratings:
+
+    weighted = (v / (v + m)) * R  +  (m / (v + m)) * C
+R = the movie's own mean rating
+    v = the movie's number of ratings
+    m = a prior strength, set here to the median rating count among qualified movies
+    C = the mean rating across all qualified movies
+
+(prior strength m = 69 ratings, overall mean C = 3.370)
 
 **Read what Claude wrote about its rule. Does it anywhere admit the rule was a choice, and that a different rule was possible? Or does it give its answer as simply the answer? Quote the sentence that decides it:**
 
-XXXX
+"To find a "best" movie that isn't an artifact of a small sample"
+
+best in quotes and clarification shows it thought of other choices. 
 
 **Your Part 2 top 10 and Claude's Part 2 top 10 — not the Part 1(d) lists. Where do they differ, and why?**
 
-XXXX
+6 of 10 of the movies are the same. They differ in the beggining, and on the order because the organization was by a weighted mean rating score using Baysian model. 
 
 **Better for what purpose? Name a situation where your rule is the right one and a situation where Claude's is. At most 150 words. You may conclude yours, its, or neither:**
 
-XXXX
+Claude's is better for movies with not that many ratings, or with scattered ratings where people all felt very differnetly because my mean is effected by outliers. 
+
 
 ## Part 6. Comparing the most ___ movie
 
 **Claude's definition:**
 
-XXXX
+Niche : movies that stand out for being *better liked than they are watched
 
 **Is Claude's film in your top 5?**
 
-XXXX
+No we don't have any of the same.
 
 **What Claude's definition sees that yours does not, and the reverse. At most 150 words:**
 
-XXXX
+It also pays attention to what the rating scores were so that the niche movies are also well liked niche movies. Mine really limits the number of ratings though, so I feel my list is full of more unqiue movies. 
 
 ## Working with Claude
 
 **What you asked Claude for during Parts 1–3** (debugging and installing only — say what you
 got stuck on)**:**
 
-XXXX
+Not really anything with claude I just got stuck in coding moments, but when I asked claude for support it was actually very comforting to know it understood my assignment and could provide suggestions. I asked it what parts of Python I should review and it gave me a list of potentially helpful code to review, and that was awesome!
 
 **Something Claude said that you could not verify, and why. Or "none," and how you checked:**
 
-XXXX
+It gave me a list of suggested Python methods that would be good to refresh for this assignment, and I couldn't verify those so I did my own searching/reading on google to remind myself what I needed to do. 
 
 **What you would do differently next time, in 3–5 sentences:**
 
-XXXX
+Take time to read the assignment (skim/assess it) on the day it is released so that I can more accurately schedule my time. 
 
 **Where did this assignment slow you down for a reason that was its fault, not yours? Point at
 the step. Or "nowhere." One or two sentences:**
 
-XXXX
+I wasn't slowed down by any instructions or assignment flaws. Nowhere. 
 
-**Hours spent:** XXXX
+**Hours spent:** 7
 
-**Anyone who helped you, or "no one":** XXXX
+**Anyone who helped you, or "no one":** My Comp Sci friend Reese Preston. 
